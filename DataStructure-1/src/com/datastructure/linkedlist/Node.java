@@ -3,7 +3,7 @@ package com.datastructure.linkedlist;
 public class Node {
 
 	public int value;
-	public Node node;
+	public Node next;
 	
 	public int getValue() {
 		return value;
@@ -11,11 +11,12 @@ public class Node {
 	public void setValue(int value) {
 		this.value = value;
 	}
-	public Node getNode() {
-		return node;
+	public Node getNext() {
+		return next;
 	}
-	public void setNode(Node node) {
-		this.node = node;
+	public void setNext(Node next) {
+		this.next = next;
 	}
+	
 	
 }
