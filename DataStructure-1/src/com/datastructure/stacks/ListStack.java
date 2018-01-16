@@ -1,30 +1,37 @@
 package com.datastructure.stacks;
 
-public class BasicStack<X> implements Stack<X> {
+import java.util.ArrayList;
+import java.util.List;
 
-	private X [] data;
+public class ListStack<X> implements Stack<X> {
+
+	private List<X> data;
 	private int stackPointer;
 	
-	public BasicStack() {
-		data = (X[]) new Object[1000];
+	public ListStack() {
+		data = new ArrayList<X>();
 		stackPointer = 0;
 	}
 	
-	public void push(X newItem){
-		data[stackPointer++] = newItem;
+	@Override
+	public void push(X newItem) {
+		data.add(newItem);
+		stackPointer++;
 	}
-	
-	public X pop(){
-		if(stackPointer==0){
+
+	@Override
+	public X pop() {
+		if(data.size()==0 && stackPointer==0){
 			throw new IllegalStateException("No more items on the stack");
 		}
-		return data[--stackPointer];
+		return data.get(--stackPointer);
 	}
-	
-	public boolean contains(X item){
+
+	@Override
+	public boolean contains(X item) {
 		boolean found = false;
 		for(int i=0; i<stackPointer; i++){
-			if(data[i].equals(item)){
+			if(data.get(i).equals(item)){
 				found = true;
 				break;
 			}
@@ -32,8 +39,9 @@ public class BasicStack<X> implements Stack<X> {
 		
 		return found;
 	}
-	
-	public X access(X item){
+
+	@Override
+	public X access(X item) {
 		while(stackPointer>0){
 			X tmpItem = pop();
 			if(item.equals(tmpItem)){
@@ -47,4 +55,5 @@ public class BasicStack<X> implements Stack<X> {
 	public int size() {
 		return stackPointer;
 	}
+
 }
