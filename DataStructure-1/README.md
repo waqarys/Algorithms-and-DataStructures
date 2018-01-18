@@ -27,6 +27,10 @@ O(n)
 FIFO - > First in first out
 
 **enQueue** O(1)
+
 **deQueue** O(1)
+
 **Search** O(n)
+
 **Access** O(n)
+

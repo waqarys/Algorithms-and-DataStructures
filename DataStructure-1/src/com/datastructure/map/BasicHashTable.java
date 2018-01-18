@@ -1,5 +1,7 @@
 package com.datastructure.map;
 
+import com.sun.org.apache.regexp.internal.recompile;
+
 public class BasicHashTable<X,Y> {
 
 	private HashEntry[] data;
@@ -55,6 +57,37 @@ public class BasicHashTable<X,Y> {
 		}
 		
 		return value;
+	}
+	
+	public boolean hasKey(X key){
+		int hash = calculateHash(key);
+		
+		// if we don't have anything for the given key, we can just return false
+		if(data[hash] == null){
+			return false;
+		}
+		// otherwise get the hashentry for the key and see if it matched the given key
+		else{
+			if(data[hash].getKey().equals(key)){
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	public boolean hasValue(Y value){
+		// loop through all the hash entries
+		for(int i=0; i<this.capacity; i++){
+			HashEntry entry = data[i];
+			
+			//if this hash entry isn't null and the value equals the one passed in, the hashtable has this value
+			if(entry != null && entry.getValue().equals(value)){
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	private int calculateHash(X key){
