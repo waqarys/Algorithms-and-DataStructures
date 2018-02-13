@@ -25,7 +25,7 @@
  		- AdditiveHash('foo') equals AdditiveHash('oof')
  	- Not secure 
  	
-# Handling Collisisons
+# Handling Collisions
 - Two distinct items have same hash value
 	- Items are assigned to the same index in the hash table
 - Two common strategies

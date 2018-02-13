@@ -35,15 +35,15 @@ FIFO - > First in first out
 **Access** O(n)
 
 # Interview Questions 
-1.      What is the use of HashCode & equals method. How is it used in comparing objects? 
-2.      How does hashMap work? 
-3.      What is “High Security” for Hash map?
-4.      Give one example of implementing multi thread? 
-5.      How do two threads communicate
-6.      Why, What & when of Hash Map.
-7.      How do you reverse a linked list?
-8.      When there is a huge database with Billions of data items - what is your approach to do multi-threading. How do you improve the performance of this data base ? Give us the code snippet.
-9.      Spring/Hibernate - What is the 1st level, 2nd level caching mechanism
+1.	  What is the use of HashCode & equals method. How is it used in comparing objects? 
+2.    How does hashMap work? 
+3.    What is “High Security” for Hash map?
+4.    Give one example of implementing multi thread? 
+5.    How do two threads communicate
+6.    Why, What & when of Hash Map.
+7.    How do you reverse a linked list?
+8.    When there is a huge database with Billions of data items - what is your approach to do multi-threading. How do you improve the performance of this data base ? Give us the code snippet.
+9.    Spring/Hibernate - What is the 1st level, 2nd level caching mechanism
 10.   Design Patterns 
 11.   Polymorphism, Abstract Class vs Interface, Feature of properties in an Interface, Is String immutable?
 12.   Understanding of concepts like synchronization, locks, RW Locks, spring IOC
