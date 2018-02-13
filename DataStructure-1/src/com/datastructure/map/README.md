@@ -12,9 +12,9 @@
 # Hashing a String
 - Naive implementation
 	- summing ASCII value of each character
- --- --- ---		 ----- ----- -----
+|---|---|---|		|-----|-----|-----|
 | F | O | O |  	->  | 101 | 111 | 111 |		= 324
- --- --- ---   		 ----- ----- -----
+|---|---|---|   	|-----|-----|-----|
  
  - Pros
  	- Stable
